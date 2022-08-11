@@ -1,8 +1,10 @@
 #!/usr/bin/env python3
+
 hostname = input("What value should we set for hostname?")
-if hostname.lower() == "mtg":
-    print("The hostname was found to be MTG")
-    print("hostanme matches expected config")
+if hostname.lower() == "mtg":    
+   print("The hostname was found to be MTG")
+   print("hostanme matches expected config")
+else:
+    print("Not MTG")
 
-    print("exiting the script")
-
+print("exiting the script")
