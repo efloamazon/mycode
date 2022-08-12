@@ -9,3 +9,12 @@ for x in vendors:
     if x not in approved_vendors:
         print(" - NOT AN APOPROVED VENDOR!", end="")
 print("\nOur loop has ended.")
+
+
+
+
+
+farms = [{"name": "NE Farm", "agriculture": ["sheep", "cows", "pigs", "chickens", "llamas", "cats"]},
+         {"name": "W Farm", "agriculture": ["pigs", "chickens", "llamas"]},
+         {"name": "SE Farm", "agriculture": ["chickens", "carrots", "celery"]}]
+
