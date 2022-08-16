@@ -1,0 +1,6 @@
+"I scaffolded it
+I coded it
+I refactored it
+I tested it
+I deployed it
+I need a beer"
