@@ -30,5 +30,7 @@ def main():
         poem4.write('I don\'t open source my code\n')
         poem4.write('Because it is embarrassing...\n')
         poem4.write('We are not the same"\n')
-         
-main()
+
+    print(poem3)
+if __name__ == "__main__":
+    main()
