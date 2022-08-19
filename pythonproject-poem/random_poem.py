@@ -1,8 +1,14 @@
 #!/usr/bin/env python3
 
-"""This creates the 10 poems that will be used in the random poem generator"""
+"""Random Poem Generator program"""
 
-def main():
+import os
+import random
+
+## Writting the poems as .txt files to be randomly selected by the program
+def poem_gen():
+
+    save_path = '/home/student/mycode/pythonproject-poem/randPoems'
     with open('Poem_1.txt', 'w') as poem1:
         poem1.write('"My code fails\n')
         poem1.write('I do not know why.\n')
@@ -26,11 +32,29 @@ def main():
 
     with open('Poem_4.txt', 'w') as poem4:
         poem4.write('"You don\'t open source your code\n')
-        poem4.write('Because it makes you money.\n')
-        poem4.write('I don\'t open source my code\n')
-        poem4.write('Because it is embarrassing...\n')
-        poem4.write('We are not the same"\n')
+        poem4.write(' Because it makes you money.\n')
+        poem4.write(' I don\'t open source my code\n')
+        poem4.write(' Because it is embarrassing...\n')
+        poem4.write(' We are not the same"\n')
 
-    print(poem3)
-if __name__ == "__main__":
-    main()
+## Welcome message with instructions for users to generate a random poem
+def poem_menu():
+    print('\nWelcome to the Random Poem Generator App!')
+    text = input('press "ENTER" to generate a poem!')
+
+    if text == "":
+        
+        
+        random_poem = random.choice(os.listdir('/home/student/mycode/pythonproject-poem'))
+        with open(random_poem) as f:
+            file_contents = f.read()
+            print(file_contents)
+            ## Random line from random poem
+            lines = file_contents.split('\n')
+            line = random.choice(lines)
+            print(line)
+            
+    else:
+        print('\nOops! Please ONLY press "ENTER" to generate a poem!')
+        poem_menu()
+poem_menu()
